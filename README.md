@@ -1,50 +1,32 @@
-# Installation and Configuration
-Install necessary dependencies
+# Pre-Interview Test — Array Merge
+
+Merges three integer arrays into a single ascending-sorted array without 
+using any built-in sort functions.
+
+- `collection_1` — pre-sorted ascending
+- `collection_2` — pre-sorted ascending  
+- `collection_3` — pre-sorted descending
+
+## Prerequisites
+- Node.js v18+
+- npm
+
+## Setup
 ```
 npm init -y
 npm install --save-dev typescript ts-node @types/node vitest @vitest/coverage-v8
 npx tsc --init
 ```
-Create `src` folder to store TypeScript code
-In `package.json` under `"scripts"` modify to this
-```
-"scripts": {
-    "build": "tsc",
-    "start": "ts-node ./dist/index.js",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "watch": "vitest --watch"
-}
-```
-and add
-```
-"type": "module"
-```
-In `tsconfig.json` uncomment file layout
-```
-"rootDir": "./src",
-"outDir": "./dist"
-```
-and add this 
-```
-"compilerOptions": {
-    // existing config
-},
-"include": ["src/**/*"],
-"exclude": ["dist", "tests"]
-```
-# Run
-Compile code
+
+## Usage
 ```
 npm run build
-```
-Execute code
-```
 npm run start
 ```
-# Test
 
-Run test
+## Testing
 ```
-npm test
+npm test              # run tests once
+npm run coverage      # with coverage report
+npm run watch         # watch mode
 ```
