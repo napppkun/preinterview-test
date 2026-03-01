@@ -1,4 +1,4 @@
-// test sort collection_3
+// demo sort collection_3
 import { sortArray } from './sortArray.js'
 
 const collection_3 : number[] = [2, 1, 0]
