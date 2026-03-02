@@ -32,6 +32,11 @@ describe('mergeImpl', () => {
                 label: 'collection_3 only'
             },
             {
+                c1: [1, 4], c2: [2, 5], c3: [],
+                expected: [1, 2, 4, 5],
+                label: 'collection_1 and collection_2'
+            },
+            {
                 c1: [2, 5], c2: [], c3: [4, 1],
                 expected: [1, 2, 4, 5],
                 label: 'collection_1 and collection_3'
